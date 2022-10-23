@@ -32,6 +32,6 @@ To use for your own project:
         * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
         * change all occurences of "TAG" to your actual tag
 
-run buil
+run build.bat (run build_release.bat for release ready mod)
 
-If you just build it like that, your mod will
+If you just build it like that, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
