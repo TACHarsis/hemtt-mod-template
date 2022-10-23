@@ -1,0 +1,11 @@
+name = "Mod Name"
+prefix = "TAG"
+author = "Your Name"
+template = "cba"
+mainprefix = "z"
+folder_optionals = true
+sig_version = 3
+files = [
+	"mod.cpp",
+	"*.paa"
+]
