@@ -9,3 +9,6 @@ files = [
     "mod.cpp",
     "*.paa"
 ]
+
+[version]
+git_hash = 0 # Disabled

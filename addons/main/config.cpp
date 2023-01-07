@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = QUOTE(COMPONENT);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -19,7 +19,6 @@ class CfgMods {
         name = "My Cool Mod";
         
         author = "Your Name";
-
 
         picture         = "title_co.paa";     // Picture displayed from the expansions menu. Optimal size is 2048x1024
         hideName        = 0;    // Hide the extension name
