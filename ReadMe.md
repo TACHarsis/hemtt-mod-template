@@ -1,7 +1,7 @@
 **************************************
 *** Easy to expand on mod template ***
 **************************************
-!! hemtt needs to be installed (and in system path) !!
+!! hemtt needs to be installed (and in system path or mod directory) !!
 
 
 To use for your own project:
@@ -32,6 +32,15 @@ To use for your own project:
         * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
         * change all occurences of "TAG" to your actual tag
 
-run build.bat (run build_release.bat for release ready mod)
+* Classic hemtt:
 
-If you just build it like that, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
+    build.bat               - to build without signing. Will build into 'addon' directory.
+    build_release.bat       - to build ready for release with signing. Will build into 'release' and 'keys' directory.
+
+* hemtt v10+
+
+    build_v10.bat           - to build without signing. Will build into '.hemtt\build' directory.
+    build_dev_v10.bat       - to build dev version, set up for file patching with associated softlinks. Will build into '.hemtt\dev' directory.
+    build_release_v10.bat   - to build ready for release with signing.  Will build into '.hemtt\release' directory.
+
+If you just build mod as is, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
