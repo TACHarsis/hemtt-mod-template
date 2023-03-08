@@ -40,8 +40,8 @@ To use for your own project:
 
 * hemtt v10+
 
-    build_v10.bat           - to build without signing. Will build into '.hemtt\build' directory.
-    build_dev_v10.bat       - to build dev version, set up for file patching with associated softlinks. Will build into '.hemtt\dev' directory.
-    build_release_v10.bat   - to build ready for release with signing.  Will build into '.hemtt\release' directory.
+    build_v10.bat           - to build without signing. Will build into '.hemttout\build' directory.
+    build_dev_v10.bat       - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
+    build_release_v10.bat   - to build ready for release with signing.  Will build into '.hemttout\release' directory.
 
 If you just build mod as is, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
