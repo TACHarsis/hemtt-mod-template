@@ -1,0 +1,13 @@
+name = "Mod Name"
+prefix = "TAG"
+author = "Your Name"
+mainprefix = "z"
+
+[files]
+include = [
+    "mod.cpp",
+    "*.paa"
+]
+
+[version]
+git_hash = 0 # Disabled

@@ -857,10 +857,14 @@ Author:
 #define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PREFIX,COMPONENT_F,var1)']
 
 
-#define VERSIONING_SYS(var1) class CfgSettings \ { \
-    class CBA \ { \
-        class Versioning \ { \
-            class var1 \ { \
+#define VERSIONING_SYS(var1) class CfgSettings \
+{ \
+    class CBA \
+    { \
+        class Versioning \
+        { \
+            class var1 \
+            { \
             }; \
         }; \
     }; \
@@ -1028,9 +1032,12 @@ Author:
 #define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
-    #define PRELOAD_ADDONS class CfgAddons \ { \
-    class PreloadAddons \ { \
-        class ADDON \ { \
+    #define PRELOAD_ADDONS class CfgAddons \
+{ \
+    class PreloadAddons \
+    { \
+        class ADDON \
+        { \
             list[]={ QUOTE(ADDON) }; \
         }; \
     }; \
@@ -1824,97 +1831,3 @@ Author:
     commy2
 ------------------------------------------- */
 #define FILE_EXISTS(FILE) (fileExists (FILE))
-
-/// COPIED FROM ACE
-
-
-/* -------------------------------------------
-Macros: ARR_#()
-    Create list from arguments. Useful for working around , in macro parameters.
-    1-8 arguments possible.
-Parameters:
-    VARIABLE(1-8) - elements for the list
-Author:
-    Nou
-------------------------------------------- */
-#define ARR_1(ARG1) ARG1
-#define ARR_2(ARG1,ARG2) ARG1, ARG2
-#define ARR_3(ARG1,ARG2,ARG3) ARG1, ARG2, ARG3
-#define ARR_4(ARG1,ARG2,ARG3,ARG4) ARG1, ARG2, ARG3, ARG4
-#define ARR_5(ARG1,ARG2,ARG3,ARG4,ARG5) ARG1, ARG2, ARG3, ARG4, ARG5
-#define ARR_6(ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) ARG1, ARG2, ARG3, ARG4, ARG5, ARG6
-#define ARR_7(ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7
-#define ARR_8(ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7, ARG8
-
-// CONTROL(46) 12
-#define DISPLAY(A) (findDisplay A)
-#define CONTROL(A) DISPLAY(A) displayCtrl
-
-/* -------------------------------------------
-Macros: IS_x()
-    Checking the data types of variables.
-    IS_ARRAY() - Array
-    IS_BOOL() - Boolean
-    IS_BOOLEAN() - UI display handle(synonym for <IS_BOOL()>)
-    IS_CODE() - Code block (i.e a compiled function)
-    IS_CONFIG() - Configuration
-    IS_CONTROL() - UI control handle.
-    IS_DISPLAY() - UI display handle.
-    IS_FUNCTION() - A compiled function (synonym for <IS_CODE()>)
-    IS_GROUP() - Group.
-    IS_INTEGER() - Is a number a whole number?
-    IS_LOCATION() - World location.
-    IS_NUMBER() - A floating point number (synonym for <IS_SCALAR()>)
-    IS_OBJECT() - World object.
-    IS_SCALAR() - Floating point number.
-    IS_SCRIPT() - A script handle (as returned by execVM and spawn commands).
-    IS_SIDE() - Game side.
-    IS_STRING() - World object.
-    IS_TEXT() - Structured text.
-Parameters:
-    VARIABLE - Variable to check if it is of a particular type [Any, not nil]
-Author:
-    Spooner
-------------------------------------------- */
-#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then {false} else {(VAR) isEqualType TYPE})
-#define IS_ARRAY(VAR)    IS_META_SYS(VAR,[])
-#define IS_BOOL(VAR)     IS_META_SYS(VAR,false)
-#define IS_CODE(VAR)     IS_META_SYS(VAR,{})
-#define IS_CONFIG(VAR)   IS_META_SYS(VAR,configNull)
-#define IS_CONTROL(VAR)  IS_META_SYS(VAR,controlNull)
-#define IS_DISPLAY(VAR)  IS_META_SYS(VAR,displayNull)
-#define IS_GROUP(VAR)    IS_META_SYS(VAR,grpNull)
-#define IS_OBJECT(VAR)   IS_META_SYS(VAR,objNull)
-#define IS_SCALAR(VAR)   IS_META_SYS(VAR,0)
-#define IS_SCRIPT(VAR)   IS_META_SYS(VAR,scriptNull)
-#define IS_SIDE(VAR)     IS_META_SYS(VAR,west)
-#define IS_STRING(VAR)   IS_META_SYS(VAR,"STRING")
-#define IS_TEXT(VAR)     IS_META_SYS(VAR,text "")
-#define IS_LOCATION(VAR) IS_META_SYS(VAR,locationNull)
-
-#define IS_BOOLEAN(VAR)  IS_BOOL(VAR)
-#define IS_FUNCTION(VAR) IS_CODE(VAR)
-#define IS_INTEGER(VAR)  (if (IS_SCALAR(VAR)) then {floor (VAR) == (VAR)} else {false})
-#define IS_NUMBER(VAR)   IS_SCALAR(VAR)
-
-#define FLOAT_TO_STRING(num)    (if (_this == 0) then {"0"} else {str parseNumber (str (_this % _this) + str floor abs _this) + "." + (str (abs _this - floor abs _this) select [2]) + "0"})
-
-/* -------------------------------------------
-Macro: GVAR()
-    Get full variable identifier for a global variable owned by this component.
-Parameters:
-    VARIABLE - Partial name of global variable owned by this component [Any].
-Example:
-    (begin example)
-        GVAR(frog) = 12;
-        // In SPON_FrogDancing component, equivalent to SPON_FrogDancing_frog = 12
-    (end)
-Author:
-    Sickboy
-------------------------------------------- */
-#define GVAR(var1) DOUBLES(ADDON,var1)
-#define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
-#define QGVAR(var1) QUOTE(GVAR(var1))
-#define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
-#define QQGVAR(var1) QUOTE(QGVAR(var1))
-#define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))

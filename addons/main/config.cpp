@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+// information on this addon specifically
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -7,12 +8,13 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {  };
-        author = "Your Name";
+        authors = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
+        author = "TAG Team"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
     };
 };
 
-
+// information on the whole mod (only needed once)
 class CfgMods {
     class PREFIX {
         dir = "@MOD_NAME";
@@ -20,19 +22,13 @@ class CfgMods {
         
         author = "Your Name";
 
-        picture         = "title_co.paa";     // Picture displayed from the expansions menu. Optimal size is 2048x1024
-        hideName        = 0;    // Hide the extension name
-        hidePicture     = 0;    // Hide the extension menu
+        picture         = "title_co.paa";       // Picture displayed from the expansions menu. Optimal size is 2048x1024
+        hideName        = "false";              // Hide the extension name in main menu and extension menu
+        hidePicture     = "false";              // Hide the extension picture in the extension menu
 
-        logoSmall       = "icon_64_ca.paa";    // Display next to the item added by the mod 64x64
-        logo            = "icon_128_ca.paa";            // Logo displayed in the main menu 128x128
-        logoOver        = "icon_128_highlight_ca.paa";        // When the mouse is over, in the main menu 128x128
-        tooltip         = "Tip of the morning";
-        tooltipOwned    = "Who sold this to you?";                                // Tool tip displayed when the mouse is left over, in the main menu
-        overview        = "Best Mod ever!"; // Overview text, displayed from the extension menu
-        description     = "It's unclear where this will show"; //??
-        action          = "https://www.ehre.to";            // Website URL, that can accessed from the expansions menu 
-        actionName      = "today?"; // label of button/tooltip in extension menu
+        action          = "https://www.ehre.to"; // Website URL, that can accessed from the expansions menu 
+        actionName      = "today?";              // label of button/tooltip in extension menu
+        description     = "It's unclear where this will show"; // Probably in context with action
 
         // Color used for DLC stripes and backgrounds (RGBA)
         dlcColor[] =

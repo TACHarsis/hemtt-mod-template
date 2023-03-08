@@ -3,13 +3,12 @@
 **************************************
 !! hemtt needs to be installed (and in system path or mod directory) !!
 
-
 To use for your own project:
 
 > At root folder:
 
     hemtt.toml && mod.cpp:
-
+        *NOTE: For older hemtt versions the hemtt.toml in the root directory is used, newer versions (alpha/rc) use the one in .hemtt/
         * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
 
     icons and title .paa files:
@@ -19,10 +18,12 @@ To use for your own project:
 > in addons\ :
 
     main:
-
-        stays as is, mostly. Use for shared macros (in main/script_macros.hpp) and to increase version
+        stays as is, mostly. Use for shared macros (in main/script_macros.hpp) and to increase version (in main/script_version.hpp)
         
-        * change all occurences of "TAG" to your actual tag
+        * change all occurences of "TAG" to your actual tag in all files
+        * change <Name>, <Author> and <Prefix> in main/config.cpp to your mod. Prefix is TAG
+        * Entries in mod.cpp and CfgMods of main/config.cpp are duplicate, I can't quite tell when which is used, so maybe just keep them synced
+
 
     addon_template:
 
@@ -30,7 +31,7 @@ To use for your own project:
 
         * change all occurences of "addon_template" to your addon folder name (probably doesn't have to be lowercase)
         * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
-        * change all occurences of "TAG" to your actual tag
+        * change all occurences of "TAG" to your actual tag in all files
 
 * Classic hemtt:
 
