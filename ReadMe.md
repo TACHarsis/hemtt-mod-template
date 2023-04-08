@@ -1,20 +1,19 @@
 **************************************
 *** Easy to expand on mod template ***
 **************************************
-!! hemtt needs to be installed (and in system path or mod directory) !!
-
 To use for your own project:
 
 > At root folder:
 
-    hemtt.toml && mod.cpp:
-        *NOTE: For older hemtt versions the hemtt.toml in the root directory is used, newer versions (alpha/rc) use the one in .hemtt/
+    mod.cpp:
         * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
 
     icons and title .paa files:
-
         * replace with your own branding
-        
+
+> in .hemtt/
+        * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
+
 > in addons\ :
 
     main:
@@ -33,15 +32,11 @@ To use for your own project:
         * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
         * change all occurences of "TAG" to your actual tag in all files
 
-* Classic hemtt:
+* hemtt batch files
+!! hemtt needs to be installed in system path or mod directory, otherwise you need to adjust the paths in the batch files !!
 
-    build.bat               - to build without signing. Will build into 'addon' directory.
-    build_release.bat       - to build ready for release with signing. Will build into 'release' and 'keys' directory.
-
-* hemtt v10+
-
-    build_v10.bat           - to build without signing. Will build into '.hemttout\build' directory.
-    build_dev_v10.bat       - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
-    build_release_v10.bat   - to build ready for release with signing.  Will build into '.hemttout\release' directory.
+    build.bat           - to build without signing. Will build into '.hemttout\build' directory.
+    build.bat           - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
+    build_release.bat   - to build ready for release with signing.  Will build into '.hemttout\release' directory.
 
 If you just build mod as is, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
