@@ -12,6 +12,7 @@ To use for your own project:
         * replace with your own branding
 
 > in .hemtt/
+
         * change <Name>, <Author> and <Prefix> to your mod. Prefix is TAG
 
 > in addons\ :
