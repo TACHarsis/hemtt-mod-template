@@ -33,7 +33,8 @@ To use for your own project:
         * change all occurences of "ADDON_TEMPLATE" to the same tag, just all caps (used in #defines)
         * change all occurences of "TAG" to your actual tag in all files
 
-* hemtt batch files
+> hemtt batch files
+
 !! hemtt needs to be installed in system path or mod directory, otherwise you need to adjust the paths in the batch files !!
 
     build.bat           - to build without signing. Will build into '.hemttout\build' directory.
