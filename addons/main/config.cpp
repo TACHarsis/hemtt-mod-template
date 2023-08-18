@@ -8,7 +8,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {  };
-        authors = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
+        authors[] = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
         author = "TAG Team"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
     };
