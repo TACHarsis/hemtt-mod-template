@@ -1,1 +1,1 @@
-PREP(printAddonName);
+PREP(printAddonSetupReminder);

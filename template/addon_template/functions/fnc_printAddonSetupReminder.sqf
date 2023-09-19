@@ -2,4 +2,4 @@
 
 // simple function to print name of addon to systemChat using the ADDON macro
 
-systemChat format ["Thank you for using the %1", 'ADDON'];
+systemChat format ["Don't forget to set up your new template addon '%1'!", 'ADDON'];
