@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+// information on this addon specifically
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -14,3 +15,4 @@ class CfgPatches {
 };
 
 // configs go here
+#include "CfgEventHandlers.hpp"
