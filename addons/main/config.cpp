@@ -20,7 +20,7 @@ class CfgMods {
         dir = "@MOD_NAME";
         name = "My Cool Mod";
         
-        author = "Your Name";
+        author = "TAG Team";                    // probably shown somewhere in the mods menu, but probably ignored by CBA/HEMTT
 
         picture         = "title_co.paa";       // Picture displayed from the expansions menu. Optimal size is 2048x1024
         hideName        = "false";              // Hide the extension name in main menu and extension menu
