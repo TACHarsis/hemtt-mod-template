@@ -38,8 +38,8 @@ To use for your own project:
 !! hemtt needs to be installed in system path or mod directory, otherwise you need to adjust the paths in the batch files !!
 
     build.bat           - to build without signing. Will build into '.hemttout\build' directory.
-    build_launch.bat        - Launches Arma3 with your mod and dependencies defined in project.toml
-    build_dev.bat           - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
+    build_launch.bat    - Launches Arma3 with your mod and dependencies defined in project.toml
+    build_dev.bat       - to build dev version, set up for file patching with associated softlinks. Will build into '.hemttout\dev' directory.
     build_release.bat   - to build ready for release with signing.  Will build into '.hemttout\release' directory.
 
 If you just build mod as is, your mod will be called "My Cool Mod" and do nothing but put out a chat message when you enter a mission/editor preview.
