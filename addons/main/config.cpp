@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {  };
+        requiredAddons[] = {}; // It's good practice to include all your addons (except this one) in this list (obviously not done with the example)
         authors[] = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
         author = "TAG Team"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
@@ -31,13 +31,7 @@ class CfgMods {
         description     = "It's unclear where this will show"; // Probably in context with action
 
         // Color used for DLC stripes and backgrounds (RGBA)
-        dlcColor[] =
-        {
-            1,
-            0.0,
-            0.86,
-            1
-        };
+        dlcColor[] = {1, 0.0, 0.86, 1};
     };
 };
 // Configs go here
