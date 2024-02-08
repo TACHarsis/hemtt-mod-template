@@ -18,10 +18,4 @@ action          = "https://www.ehre.to";    // Website URL, that can accessed fr
 actionName      = "today?";                 // label of button/tooltip in extension menu
 
 // Color used for DLC stripes and backgrounds (RGBA)
-dlcColor[] =
-{
-    1,
-    0.0,
-    0.86,
-    1
-};
+dlcColor[] = {1, 0.0, 0.86, 1};
