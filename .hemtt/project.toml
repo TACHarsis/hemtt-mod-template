@@ -9,6 +9,10 @@ include = [
     "*.paa"
 ]
 
+exclude = [
+    "*.png", # explicitly excluding image source files from build, but not repository
+]
+
 [version]
 git_hash = 0 # Disabled
 
