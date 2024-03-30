@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {}; // It's good practice to include all your addons (except this one) in this list (obviously not done with the example)
+        requiredAddons[] = {}; // include external addons here that your whole mod depends on and have your other addons require this one.
         authors[] = {"Your Name", "Other Author"}; // sub array of authors, considered for the specific addon
         author = "TAG Team"; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
